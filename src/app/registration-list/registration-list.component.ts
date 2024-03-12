@@ -18,7 +18,7 @@ export class RegistrationListComponent implements OnInit {
   public users!: User[];
   dataSource!: MatTableDataSource<User>;
 
-  displayedColumns: string[] = ['id', 'firstName', 'lastName', 'email', 'mobile', 'bmiResult', 'gender', 'package', 'enquiryDate', 'action'];
+  displayedColumns: string[] = ['id', 'firstName', 'lastName', 'email',  'role',  'action'];
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -54,7 +54,7 @@ export class RegistrationListComponent implements OnInit {
         this.apiService.deleteRegistered(id)
           .subscribe({
             next: (res) => {
-              this.toastService.success({ detail: 'SUCCESS', summary: 'Deleted Successfully', duration: 3000 });
+              this.toastService.success({ detail: 'SUCCESS', summary: 'User Deleted Successfully', duration: 3000 });
               this.getUsers();
             },
             error: (err) => {
@@ -63,18 +63,10 @@ export class RegistrationListComponent implements OnInit {
           })
       },
       () => {
-        //yor logic if No clicked
       })
 
   }
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
 
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
-    }
-  }
 
 }

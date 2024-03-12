@@ -1,3 +1,13 @@
-table {
+.mat-table-responsive {
+  overflow-x: auto;
+}
+
+.mat-table {
   width: 100%;
+}
+
+.mat-table th, .mat-table td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
