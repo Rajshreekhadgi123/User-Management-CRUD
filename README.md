@@ -2,9 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
+## Cloning the Project
+
+step 1 : To open this project is Visual Studio Code you need to clone this project by using Http link form code tab and you need to use this command `git clone project http url link` in Command Prompt.
+
+step 2 : After this you need to type `code .` to open the project is VS Code.
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` to Run the Project. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## JSON Server
 
